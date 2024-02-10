@@ -1,24 +1,30 @@
-﻿# CMakeList.txt : Top-level CMake project file, do global configuration
-# and include sub-projects here.
+﻿# CMakeList.txt : CMake project for i hate cmake, include source and define
+# project specific logic here.
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("5etools-avrae")
+# Enable Hot Reload for MSVC compilers if supported.
+if (POLICY CMP0141)
+  cmake_policy(SET CMP0141 NEW)
+  set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
+endif()
 
-# Include sub-projects.
-add_subdirectory ("src")
+project ("avrae-5etools")
 
-# Add include directories
+# Add source to this project's executable.
+add_executable (go "main.cpp")
+
 include_directories("include")
-
-#nlohmann json
 
 include(FetchContent)
 
 FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
 FetchContent_MakeAvailable(json)
 
-# Add executable
-add_executable(5etools-avrae "src/main.cpp" "include/Avrae.h")
+target_link_libraries(go PRIVATE nlohmann_json::nlohmann_json)
 
-target_link_libraries(5etools-avrae PRIVATE nlohmann_json::nlohmann_json)
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET go PROPERTY CXX_STANDARD 20)
+endif()
+
+# TODO: Add tests and install targets if needed.
