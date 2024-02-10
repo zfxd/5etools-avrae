@@ -12,7 +12,7 @@ endif()
 project ("avrae-5etools")
 
 # Add source to this project's executable.
-add_executable (go "main.cpp")
+add_executable (go "main.cpp" "src/parsers.cpp")
 
 include_directories("include")
 

@@ -3,16 +3,9 @@
 //
 
 #include "main.h"
-#include "Avrae.h"
 
 using namespace std;
 
-
-#include <fstream>
-//#include <Windows.h>
-
-#include <nlohmann/json.hpp>
-using json = nlohmann::json;
 
 int main()
 {
@@ -55,21 +48,63 @@ int main()
 			continue;
 		}
 		curr.name = spell["name"];
-		std::cout << "Spell name: " << spell["name"] << std::endl;
+		std::cout << "Name: " << curr.name << std::endl;
 
 		if (spell["level"].is_null()) {
 			std::cerr << "Error: level is null" << std::endl;
 			continue;
 		}
 		curr.level = spell["level"];
-		std::cout << "Spell level: " << spell["level"] << std::endl;
+		//std::cout << "Level: " << curr.level << std::endl;
 
 		if (spell["school"].is_null()) {
 			std::cerr << "Error: school is null" << std::endl;
 			continue;
 		}
 		curr.school = spell["school"];
-		std::cout << "Spell school: " << spell["school"] << std::endl;
+		//std::cout << "School: " << curr.school << std::endl;
+
+		if (spell["time"].is_null()) {
+			std::cerr << "Error: time is null" << std::endl;
+			continue;
+		}
+		curr.casttime = fet_time(spell["time"]);
+		//std::cout << "Time: " << curr.casttime << std::endl;
+
+		if (spell["range"].is_null()) {
+			std::cerr << "Error: range is null" << std::endl;
+			continue;
+		}
+		curr.range = fet_range(spell["range"]);
+		std::cout << "Range: " << curr.range << std::endl;
+
+
+
+
+
+		// VVVV TODO
+
+
+		if (spell["duration"].is_null()) {
+			std::cerr << "Error: duration is null" << std::endl;
+			continue;
+		}
+		json duration = spell["duration"];
+		std::cout << "Spell duration: " << to_string(duration) << std::endl;
+
+		//if (spell["classes"].is_null()) {
+		//	std::cerr << "Error: classes is null" << std::endl;
+		//	continue;
+		//}
+		//json classes = spell["classes"];
+		//std::cout << "Spell classes: " << to_string(classes) << std::endl;
+
+		//if (spell["entries"].is_null()) {
+		//	std::cerr << "Error: entries is null" << std::endl;
+		//	continue;
+		//}
+		//json entries = spell["entries"];
+		//std::cout << "Spell entries: " << to_string(entries) << std::endl;
 
 
 		// Parse into avrae format

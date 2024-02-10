@@ -6,3 +6,11 @@
 #include <iostream>
 
 // TODO: Reference additional headers your program requires here.
+# include "Avrae.h"
+# include "parsers.h"
+
+#include <fstream>
+//#include <Windows.h>
+
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
