@@ -76,35 +76,77 @@ int main()
 			continue;
 		}
 		curr.range = fet_range(spell["range"]);
-		std::cout << "Range: " << curr.range << std::endl;
-
-
-
-
-
-		// VVVV TODO
-
+		//std::cout << "Range: " << curr.range << std::endl;
 
 		if (spell["duration"].is_null()) {
 			std::cerr << "Error: duration is null" << std::endl;
 			continue;
 		}
-		json duration = spell["duration"];
-		std::cout << "Spell duration: " << to_string(duration) << std::endl;
+		curr.duration = fet_duration(spell["duration"]);
+		//std::cout << "Duration: " << curr.duration << std::endl;
+		if (curr.duration.find("Concentration") != std::string::npos) {
+			curr.concentration = true;
+			//std::cout << "Conc." << std::endl;
+		}
 
-		//if (spell["classes"].is_null()) {
-		//	std::cerr << "Error: classes is null" << std::endl;
-		//	continue;
-		//}
-		//json classes = spell["classes"];
-		//std::cout << "Spell classes: " << to_string(classes) << std::endl;
+		if (spell["classes"].is_null()) {
+			std::cerr << "Error: classes is null" << std::endl;
+			continue;
+		}
+		curr.classes = fet_classes(spell["classes"]);
+		//std::cout << "Classes: " << curr.classes << std::endl;
 
-		//if (spell["entries"].is_null()) {
-		//	std::cerr << "Error: entries is null" << std::endl;
-		//	continue;
-		//}
-		//json entries = spell["entries"];
-		//std::cout << "Spell entries: " << to_string(entries) << std::endl;
+		// TODO - subclasses? Avrae has a field for this.
+		// What about background? Race? ... etc etc - 5etools has a TON of sources
+		// Low priority for now
+
+		// Entries = spell description
+		if (spell["entries"].is_null()) {
+			std::cerr << "Error: entries is null" << std::endl;
+			continue;
+		}
+		curr.description = fet_entries(spell["entries"].template get<std::vector<std::string>>());
+		std::cout << "Description: " << curr.description << std::endl;
+
+		// Higher Levels
+		if (!spell["entriesHigherLevel"].is_null()) {
+			std::vector<json> ehl= spell["entriesHigherLevel"].template get<std::vector< json >>();
+			
+			// Why would we ever have more???
+			json e = ehl[0];
+
+			if (e["entries"].is_null()) {
+				std::cerr << "Error: Has upcast but spell.entriesHigherLevel.entries is null" << std::endl;
+				return 1;
+			}
+			else {
+				curr.higherlevels = fet_entries(e["entries"].template get<std::vector<std::string>>());
+				std::cout << "Higher Levels: " << curr.higherlevels << std::endl;
+			}
+		}
+		else {
+			std::cout << "No upcast" << std::endl;
+		}
+
+
+
+		if (spell["components"].is_null()) {
+			std::cerr << "Error: components is null" << std::endl;
+			continue;
+		}
+		curr.components = fet_components(spell["components"], curr.level);
+		std::cout << "Components: " << curr.components << std::endl;
+
+		// Ritual TODO
+
+
+
+
+
+
+		
+
+
 
 
 		// Parse into avrae format

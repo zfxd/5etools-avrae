@@ -122,8 +122,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 10,
-						"upTo": true
+						"amount": 10
 					},
 					"concentration": true
 				}
@@ -422,8 +421,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "hour",
-						"amount": 1,
-						"upTo": true
+						"amount": 1
 					},
 					"concentration": true
 				}
@@ -511,8 +509,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "hour",
-						"amount": 8,
-						"upTo": true
+						"amount": 8
 					},
 					"concentration": true
 				}
@@ -688,8 +685,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 10,
-						"upTo": true
+						"amount": 10
 					},
 					"concentration": true
 				}
@@ -786,7 +782,6 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"r": true,
 				"m": {
 					"text": "a pinch each of diamond, ruby, emerald and sapphire dust, worth a total of 100gp, which the spell consumes",
 					"consume": true
@@ -938,8 +933,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 1,
-						"upTo": true
+						"amount": 1
 					},
 					"concentration": true
 				}
@@ -1213,8 +1207,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 10,
-						"upTo": true
+						"amount": 10
 					},
 					"concentration": true
 				}
@@ -1286,8 +1279,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 10,
-						"upTo": true
+						"amount": 10
 					},
 					"concentration": true
 				}
@@ -1352,8 +1344,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 1,
-						"upTo": true
+						"amount": 1
 					},
 					"concentration": true
 				}
@@ -1421,8 +1412,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 1,
-						"upTo": true
+						"amount": 1
 					},
 					"concentration": true
 				}
@@ -1594,8 +1584,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "day",
-						"amount": 1,
-						"upTo": true
+						"amount": 1
 					},
 					"concentration": true
 				}
@@ -1762,8 +1751,7 @@
 					"type": "timed",
 					"duration": {
 						"type": "minute",
-						"amount": 1,
-						"upTo": true
+						"amount": 1
 					},
 					"concentration": true
 				}
