@@ -11,7 +11,7 @@ int main()
 {
 	std::ifstream f;
 
-	f.open("../../../5et.json");
+	f.open("../../../in.json");
 
 	// Check if open was successful
 	if (f.fail()) {
@@ -83,10 +83,16 @@ int main()
 			continue;
 		}
 		curr.duration = fet_duration(spell["duration"]);
-		//std::cout << "Duration: " << curr.duration << std::endl;
-		if (curr.duration.find("Concentration") != std::string::npos) {
-			curr.concentration = true;
-			//std::cout << "Conc." << std::endl;
+		std::cout << "Duration: " << curr.duration << std::endl;
+		
+		// CONCENTRATION
+		std::vector<json> durs = spell["duration"].template get<std::vector<json>>();
+		for (json d : durs) {
+			if (!d["concentration"].is_null()) {
+				curr.concentration = d["concentration"].template get<bool>();
+				std::cout << "Concentration" << std::endl;
+				break;
+			}
 		}
 
 		if (spell["classes"].is_null()) {
@@ -106,7 +112,7 @@ int main()
 			continue;
 		}
 		curr.description = fet_entries(spell["entries"].template get<std::vector<std::string>>());
-		std::cout << "Description: " << curr.description << std::endl;
+		//std::cout << "Description: " << curr.description << std::endl;
 
 		// Higher Levels
 		if (!spell["entriesHigherLevel"].is_null()) {
@@ -121,7 +127,7 @@ int main()
 			}
 			else {
 				curr.higherlevels = fet_entries(e["entries"].template get<std::vector<std::string>>());
-				std::cout << "Higher Levels: " << curr.higherlevels << std::endl;
+				//std::cout << "Higher Levels: " << curr.higherlevels << std::endl;
 			}
 		}
 		else {
@@ -137,20 +143,52 @@ int main()
 		curr.components = fet_components(spell["components"], curr.level);
 		std::cout << "Components: " << curr.components << std::endl;
 
-		// Ritual TODO
+		// Ritual
+		if (!spell["meta"].is_null()) {
+			// Ritual
+			if(!spell["meta"]["ritual"].is_null()) {
+				curr.ritual = spell["meta"]["ritual"].template get<bool>();
+				std::cout << "Ritual" << std::endl;
+			}
+
+			// Technomagic goes here too??
+		}
 
 
+		// School
+		if(spell["school"].is_null()) {
+			std::cerr << "Error: school is null" << std::endl;
+			continue;
+		}
+		curr.school = fet_school(spell["school"]);
 
+		// Subschool
+		// Avrae appends to schoolstring
+		if(!spell["subschools"].is_null()) {
+			// Subschool exists
+			if(!add_subschools(curr, spell["subschools"])) {
+				std::cerr << "Error: subschools is null" << std::endl;
+				continue;
+			}
+		}
 
+		std::cout << "School: " << curr.school << std::endl;
 
-
-		
-
-
-
-
-		// Parse into avrae format
+		avrae_spells.push_back(curr);
 	}
+
+	std::cout << "AVRAE SPELLS:::::::" << std::endl;
+	
+	// We do files at some point... TODO
+	std::cout << "[";
+	for (int i = 0; i < avrae_spells.size(); i++) {
+		if(i != 0) {
+			std::cout << ",";
+		}
+
+		std::cout << avrae_spells[i].to_string();
+	}
+	std::cout << "]";
 
 	return 0;
 }

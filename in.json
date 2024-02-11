@@ -15,19 +15,6 @@
 				"color": "#17c200"
 			},
 			{
-				"json": "PolarRay",
-				"abbreviation": "PR",
-				"full": "Polar Ray",
-				"url": "",
-				"authors": [
-					"???"
-				],
-				"convertedBy": [
-					"zfxd"
-				],
-				"color": "#0efbe0"
-			},
-			{
 				"json": "TheCompendiumofSacredMysteries",
 				"abbreviation": "CSM",
 				"full": "The Compendium of Sacred Mysteries",
@@ -45,7 +32,7 @@
 	"spell": [
 		{
 			"name": "Aerial Alacrity",
-			"level": 1,
+			"level": 2,
 			"school": "T",
 			"time": [
 				{
@@ -87,11 +74,10 @@
 			},
 			"entries": [
 				"Target a willing creature within range you can see that has a flying speed (including those with a temporary or magically-bestowed flying speed). That creature gains the following benefits for the duration:",
-				"• The target can take the Dash action as a bonus action.",
-				"• The target can hover.",
-				"• The target has advantage on Dexterity (Acrobatics) checks.",
-				"• The target doesn't provoke an opportunity attack when",
-				"it flies out of an enemy's reach."
+				"- The target can take the Dash action as a bonus action.",
+				"- The target can hover.",
+				"- The target has advantage on Dexterity (Acrobatics) checks.",
+				"- The target doesn't provoke an opportunity attack when it flies out of an enemy's reach."
 			],
 			"source": "FeyFolio",
 			"page": 85,
@@ -140,6 +126,10 @@
 					{
 						"name": "Ranger",
 						"source": "PHB"
+					},
+					{
+						"name": "Witch",
+						"source": "FeyFolio"
 					}
 				]
 			},
@@ -248,6 +238,10 @@
 					{
 						"name": "Witch",
 						"source": "FeyFolio"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
 					}
 				]
 			},
@@ -370,7 +364,7 @@
 				]
 			},
 			"entries": [
-				"You touch a weapon. Until the spell ends, the weapon becomes magical (if it wasn’t already) and gains the following property in addition to any others it has:",
+				"You touch a weapon. Until the spell ends, the weapon becomes magical (if it wasn't already) and gains the following property in addition to any others it has:",
 				"Curse. This weapon is cursed, and touching it extends this curse to you, unless you are a fey creature, in which case you suffer no ill effect. As long as you remain cursed, you are unwilling to part with the weapon, keeping it within reach at all times.",
 				"Whenever you roll a 1 on an attack roll with this weapon, roll a {@dice d6} and apply the result from the table below.",
 				"{@dice d6} Effect",
@@ -401,7 +395,7 @@
 		},
 		{
 			"name": "Curse of Youth",
-			"level": 4,
+			"level": 1,
 			"school": "T",
 			"time": [
 				{
@@ -461,10 +455,10 @@
 			"entries": [
 				"This spell reverses time for a creature that you can see within range until it becomes a helpless baby. An unwilling creature must",
 				"make a Wisdom saving throw to avoid the effect. Shapechangers and creatures that do not experience infancy automatically succeed on this saving throw.",
-				" If the target drops to 0 hit points, it reverts back to its original age, and excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 hit points, it isn’t knocked {@condition unconscious}.",
-				" The target retains all of its game statistics except its base movement speed, hit points, and size, which are changed to 10 feet, half of the target's maximum, and one size category smaller, respectively. It cannot take any actions, bonus actions, or reactions, cannot cast spells, and cannot communicate, except by crying (a person using the spell comprehend languages or similar abilities can interpret such crying to gain a rough understanding of the baby’s emotional state). While under the effects of this spell, the target is {@condition prone} and cannot stand up without the help of an",
+				" If the target drops to 0 hit points, it reverts back to its original age, and excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked {@condition unconscious}.",
+				" The target retains all of its game statistics except its base movement speed, hit points, and size, which are changed to 10 feet, half of the target's maximum, and one size category smaller, respectively. It cannot take any actions, bonus actions, or reactions, cannot cast spells, and cannot communicate, except by crying (a person using the spell comprehend languages or similar abilities can interpret such crying to gain a rough understanding of the baby's emotional state). While under the effects of this spell, the target is {@condition prone} and cannot stand up without the help of an",
 				"adult.",
-				" The target’s gear is unaffected by this spell; it will likely fall off the target due to being vastly oversized.  ",
+				" The target's gear is unaffected by this spell; it will likely fall off the target due to being vastly oversized.  ",
 				"A remove curse spell ends this curse early."
 			],
 			"source": "FeyFolio",
@@ -528,7 +522,7 @@
 			},
 			"entries": [
 				"You send a short message of twenty-five words or fewer to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
-				" You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn’t arrive.",
+				" You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive.",
 				" You can use this message to suggest a reasonable-sounding course of activity to the target, in which case the target must make a Wisdom saving throw or be compelled to follow your instructions for the duration, as per a suggestion spell."
 			],
 			"source": "FeyFolio",
@@ -585,7 +579,7 @@
 				]
 			},
 			"entries": [
-				"The edge of a slashing or piercing weapon you are holding is magically sharpened. For the duration, you can use your spellcasting ability instead of Strength or Dexterity for the attack and damage rolls of melee attacks using that weapon, and the weapon deals double damage to objects andstructures. The weapon also becomes magical, if it isn’t already. The spell ends if you cast it again or if you let go of the weapon."
+				"The edge of a slashing or piercing weapon you are holding is magically sharpened. For the duration, you can use your spellcasting ability instead of Strength or Dexterity for the attack and damage rolls of melee attacks using that weapon, and the weapon deals double damage to objects andstructures. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon."
 			],
 			"source": "FeyFolio",
 			"page": 87,
@@ -775,7 +769,7 @@
 				]
 			},
 			"entries": [
-				"For the duration, you hide a target that you touch from divination magic. The target can be a willing creature, a place, or an object no larger than 10 feet in any dimension. If the target is targeted by any divination magic or perceived through a scrying spell’s sensors, you are able to present the diviner with false information of your choice, as long as you are conscious at the time of the divination attempt. The target could appear to be in different circumstances, in one or more false locations, or completely undetectable as you desire."
+				"For the duration, you hide a target that you touch from divination magic. The target can be a willing creature, a place, or an object no larger than 10 feet in any dimension. If the target is targeted by any divination magic or perceived through a scrying spell's sensors, you are able to present the diviner with false information of your choice, as long as you are conscious at the time of the divination attempt. The target could appear to be in different circumstances, in one or more false locations, or completely undetectable as you desire."
 			],
 			"source": "FeyFolio",
 			"page": "87-88",
@@ -831,10 +825,10 @@
 				]
 			},
 			"entries": [
-				"After spending the casting time singing a song, you touch a Small or smaller beast. The target must have either no Intelligence score or an Intelligence of 3 or less. The beast then transforms into a humanoid of your choosing. All of the creature’s abilities scores are changed to 10. The humanoid is of a friendly disposition to you. has a basic understanding of all simple unskilled labors, and can understand the languages you speak, but does not speak themselves. The footman has proficiency in any trade, craft, or profession you have proficiency in and uses your proficiency bonus. Additionally, upon transformation, the animal is clothed in mundane clothing of your choosing with a nominal value no greater than 10 gp (though this clothing cannot be removed from their body for the duration of the spell).",
+				"After spending the casting time singing a song, you touch a Small or smaller beast. The target must have either no Intelligence score or an Intelligence of 3 or less. The beast then transforms into a humanoid of your choosing. All of the creature's abilities scores are changed to 10. The humanoid is of a friendly disposition to you. has a basic understanding of all simple unskilled labors, and can understand the languages you speak, but does not speak themselves. The footman has proficiency in any trade, craft, or profession you have proficiency in and uses your proficiency bonus. Additionally, upon transformation, the animal is clothed in mundane clothing of your choosing with a nominal value no greater than 10 gp (though this clothing cannot be removed from their body for the duration of the spell).",
 				" You can instruct the humanoid to do anything that is reasonably within their capability and is not obviously dangerous. They behave as though they are dutifully employed by you.",
-				" The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The humanoid form has 4 ({@dice 1d8}) hit points. When it reverts to its true form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its true form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 hit points, it isn’t knocked {@condition unconscious}.",
-				" This spell’s duration varies depending upon when and where it was cast. If cast in a location where time passes normally, the spell lasts until the twelfth stroke of the next midnight, however long that may be. Elsewhere, the spell lasts for 24 hours"
+				" The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The humanoid form has 4 ({@dice 1d8}) hit points. When it reverts to its true form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its true form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked {@condition unconscious}.",
+				" This spell's duration varies depending upon when and where it was cast. If cast in a location where time passes normally, the spell lasts until the twelfth stroke of the next midnight, however long that may be. Elsewhere, the spell lasts for 24 hours"
 			],
 			"source": "FeyFolio",
 			"page": 88,
@@ -973,7 +967,7 @@
 			"entries": [
 				"You spray golden particles in a 15-foot cone, covering all creatures and objects in that area. Each creature in the area",
 				"must make a Constitution save or be {@condition blinded} for the duration. A creature {@condition blinded} by this spell can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-				" An affected creature or object can’t benefit from being {@condition invisible} for the duration."
+				" An affected creature or object can't benefit from being {@condition invisible} for the duration."
 			],
 			"source": "FeyFolio",
 			"page": 89,
@@ -1018,39 +1012,22 @@
 			},
 			"entries": [
 				"This wondrous spell has the power to grant wishes. Unfortunately, it only functions when given a vague, general sense of what the caster wants. When you cast this spell, you must speak the phrase “I wish for…” followed by one of the following words:",
-				" Freedom. You are immune to the {@condition charmed}, {@condition grappled},",
-				"{@condition paralyzed}, {@condition petrified}, and {@condition restrained} conditions for the next 8",
-				"hours.",
-				" Friendship. The spell conjures two random beasts of",
-				"CR 2 or lower, as per the conjure animals spell, cast with",
-				"5th level spell slot.",
-				" Happiness. You automatically succeed on the next",
-				"saving throw you are required to make.",
-				" Health. You regain {@dice 10d8} hit points and are cured of any",
-				"diseases and poisons you are suffering from.",
-				" Knowledge. You learn 3 things that you didn’t know",
-				"before, determined by the GM. If you are currently engaged",
-				"in a quest or mission, at least one piece of information will",
-				"be relevant to it.",
-				" Love. One randomly-determined creature that you have",
-				"previously met falls in love with you.",
-				" Peace. Up to 6 creatures of your choice plus 6 creatures",
-				"of the GM’s choice are placed under the effects of a",
-				"sanctuary spell for the next 8 hours.",
-				" Power. Your maximum hit points are increased by 25",
-				"for the next hour. Also, one of more of your ability scores",
-				"chosen at random from the table below becomes 19 for the",
-				"same duration, unless it is already higher.",
+				"Freedom. You are immune to the {@condition charmed}, {@condition grappled}, {@condition paralyzed}, {@condition petrified}, and {@condition restrained} conditions for the next 8 hours.",
+				"Friendship. The spell conjures two random beasts of CR 2 or lower, as per the conjure animals spell, cast with 5th level spell slot.",
+				"Happiness. You automatically succeed on the next saving throw you are required to make.",
+				"Health. You regain {@dice 10d8} hit points and are cured of any diseases and poisons you are suffering from.",
+				"Knowledge. You learn 3 things that you didn't know before, determined by the GM. If you are currently engaged in a quest or mission, at least one piece of information will be relevant to it.",
+				"Love. One randomly-determined creature that you have previously met falls in love with you.",
+				"Peace. Up to 6 creatures of your choice plus 6 creatures of the GM's choice are placed under the effects of a sanctuary spell for the next 8 hours.",
+				"Power. Your maximum hit points are increased by 25 for the next hour. Also, one of more of your ability scores chosen at random from the table below becomes 19 for the same duration, unless it is already higher.",
 				"{@dice d6} Ability Score",
 				"1 Strength",
 				"2 Dexterity",
 				"3 Intelligence",
 				"4 Wisdom",
 				"5 Charisma",
-				"6 Roll twice on this table and keep",
-				"both results (re-roll additional sixes)",
-				" Wealth. The spell creates coins or gemstones worth",
-				"{@dice 1d100 × 100} gp, which disappear after 24 hours."
+				"6 Roll twice on this table and keep both results (re-roll additional sixes)",
+				"Wealth. The spell creates coins or gemstones worth {@dice 1d100 × 100} gp, which disappear after 24 hours."
 			],
 			"source": "FeyFolio",
 			"page": 89,
@@ -1238,7 +1215,7 @@
 			},
 			"entries": [
 				"One willing Large or smaller target of your choosing is surrounded by an opaque cocoon of force. Nothing, not physical objects, energy, or other spell effects, can pass through the cocoon, in or out, though a creature within it can breathe there. The cocoon is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the cocoon damage anything outside it. A disintegrate spell targeting the cocoon destroys it without harming anything inside it.",
-				" The cocooned creature can use a bonus action to cause the cocoon to instantly dissolve away. The creature then emerges with butterfly wings that grant it a flight speed of 80 feet for the duration. When it emerges, the creature can also choose to have a butterfly proboscis, which lasts for the spell’s duration. This prevents it from speaking or performing the verbal components of spells, but grants the creature a melee bite attack that deals {@damage 4d6} necrotic damage on a hit. The creature regains hit points equal to half the damage dealt with this attack.",
+				" The cocooned creature can use a bonus action to cause the cocoon to instantly dissolve away. The creature then emerges with butterfly wings that grant it a flight speed of 80 feet for the duration. When it emerges, the creature can also choose to have a butterfly proboscis, which lasts for the spell's duration. This prevents it from speaking or performing the verbal components of spells, but grants the creature a melee bite attack that deals {@damage 4d6} necrotic damage on a hit. The creature regains hit points equal to half the damage dealt with this attack.",
 				" If the creature is in the air when the spell ends, they float gently to the ground."
 			],
 			"source": "FeyFolio",
@@ -1370,7 +1347,7 @@
 				]
 			},
 			"entries": [
-				"Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force of swirling winds appears in the cube and lasts for the spell’s duration.",
+				"Choose an unoccupied 5-foot cube of air that you can see within range. An elemental force of swirling winds appears in the cube and lasts for the spell's duration.",
 				" Any creature that ends its turn within 5 feet of the petal storm must make a Strength saving throw. On a failed save, the creature takes {@damage 1d8} slashing damage and has disadvantage on any attack rolls it makes before the end of its next turn. On a successful save, the creature takes half as much damage and suffers no additional penalty. As a bonus action, you can move the storm up to 30 feet in any direction. If it moves over leaf litter, flowers, bushes, or trees, it sucks up extra material and forms a 10-foot-radius cloud of leaves and petals around itself that lasts until the start of your next turn. The cloud heavily obscures its area. "
 			],
 			"source": "FeyFolio",
@@ -1477,7 +1454,7 @@
 				]
 			},
 			"entries": [
-				"You draw upon the power of raw chaos to create unpredictable effects. This spell duplicates the effects of a 1st-level spell of your choice from your class’ spell list. Any material components required for the spell appear magically in your hands when you cast the dweomer, only to disappear once they have been used. The effects of the spell are then applied instantly.",
+				"You draw upon the power of raw chaos to create unpredictable effects. This spell duplicates the effects of a 1st-level spell of your choice from your class' spell list. Any material components required for the spell appear magically in your hands when you cast the dweomer, only to disappear once they have been used. The effects of the spell are then applied instantly.",
 				" After you cast this spell, you must immediately roll on the Weird Arcana table."
 			],
 			"source": "FeyFolio",
@@ -1598,7 +1575,7 @@
 				]
 			},
 			"entries": [
-				"You touch an object that is not being worn or carried and cause it to grow smaller for the duration. The target’s size is divided by 4 in all dimensions, and its weight is reduced to one-sixteenth of its previous weight. This reduction decreases its size by two categories―from Medium to Tiny, for example―unless it would still be Gargantuan after shrinking. If the target is a standard weapon, it is transformed into the nearest equivalent on the Tiny",
+				"You touch an object that is not being worn or carried and cause it to grow smaller for the duration. The target's size is divided by 4 in all dimensions, and its weight is reduced to one-sixteenth of its previous weight. This reduction decreases its size by two categories―from Medium to Tiny, for example―unless it would still be Gargantuan after shrinking. If the target is a standard weapon, it is transformed into the nearest equivalent on the Tiny",
 				"Weapons table. If no equivalent exists, the weapon is unusable for the duration.",
 				" This spell can affect an assembly or collection of objects, as long as they form a single cohesive entity, such as a ship or building. Contents of the collection or assembly that are not creatures are also shrunk. Any creatures that are inside an object when it is shrunk are magically shunted to the nearest available space outside the object if they would no longer fit inside it."
 			],
@@ -1718,7 +1695,7 @@
 				]
 			},
 			"entries": [
-				"You brandish the branch of a Huge or smaller plant, shouting for it to grow legs and move at your bidding. The target must have either no Intelligence score or an Intelligence of 3 or less. The target, along with up to 5 other Huge or smaller plants within 60 feet of it, gains an Intelligence of 10 and the ability to speak one language you know. The targets also gain the ability to move their limbs, roots, vines, creepers, and so forth, and gain senses similar to a human’s. Your GM chooses statistics appropriate for",
+				"You brandish the branch of a Huge or smaller plant, shouting for it to grow legs and move at your bidding. The target must have either no Intelligence score or an Intelligence of 3 or less. The target, along with up to 5 other Huge or smaller plants within 60 feet of it, gains an Intelligence of 10 and the ability to speak one language you know. The targets also gain the ability to move their limbs, roots, vines, creepers, and so forth, and gain senses similar to a human's. Your GM chooses statistics appropriate for",
 				"the awakened plants, such as the statistics for the awakened shrub or the awakened tree.",
 				" The awakened plants are {@condition charmed} by you for 30 days or until you or your companions do anything harmful to any of them. When the {@condition charmed} condition ends, the awakened creatures choose whether to remain friendly to you, based on how you treated them while they were {@condition charmed}."
 			],
@@ -1778,8 +1755,8 @@
 			},
 			"entries": [
 				"You step into a wooden object or tree large enough to fully contain your body, melding yourself and all the equipment you carry with the wood for the duration. Using your movement, you step into the wood at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.",
-				" While merged with the wood, you can’t see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the wood. You can use your movement to leave the wood where you entered it, which ends the spell. You otherwise can’t move.",
-				" Minor physical damage to the wood doesn’t harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals {@damage 3d6} bludgeoning damage to you; the same happens if your {@status concentration} is broken while merged with the wood. The wood’s complete destruction (or transmutation into a different substance) expels you and deals 25 bludgeoning damage to you. If expelled, you fall {@condition prone} in an unoccupied space closest to where you first entered."
+				" While merged with the wood, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the wood. You can use your movement to leave the wood where you entered it, which ends the spell. You otherwise can't move.",
+				" Minor physical damage to the wood doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals {@damage 3d6} bludgeoning damage to you; the same happens if your {@status concentration} is broken while merged with the wood. The wood's complete destruction (or transmutation into a different substance) expels you and deals 25 bludgeoning damage to you. If expelled, you fall {@condition prone} in an unoccupied space closest to where you first entered."
 			],
 			"source": "FeyFolio",
 			"page": 92,
@@ -1866,134 +1843,6 @@
 			"components": {
 				"v": true
 			}
-		},
-		{
-			"name": "Polar Ray",
-			"level": 0,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Druid",
-						"source": "PHB"
-					},
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					}
-				]
-			},
-			"entries": [
-				"You glaciate a mass of ice crystals around yourself and launch a beam of boreal air at an enemy or object within range. Make a ranged spell attack. On a hit, the target takes {@damage 1d6} cold damage plus an amount equal to your spellcasting ability modifier. This spell will instantly extinguish a campfire or freeze a gallon of water.",
-				"This spell's damage increases by an amount equal to your spellcasting ability modifier at 5th level ({@dice 1d6} plus two times your modifier), 11th level ({@dice 1d6} plus three times your modifier), and 17th level ({@dice 1d6} plus four times your modifier)."
-			],
-			"source": "PolarRay",
-			"page": "???",
-			"components": {
-				"v": true,
-				"s": true
-			}
-		},
-		{
-			"name": "Eldritch Blast",
-			"source": "PHB",
-			"page": 237,
-			"srd": true,
-			"basicRules": true,
-			"level": 0,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 120
-				}
-			},
-			"components": {
-				"v": true,
-				"s": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d10} force damage.",
-				"The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
-			],
-			"damageInflict": [
-				"force"
-			],
-			"spellAttack": [
-				"R"
-			],
-			"miscTags": [
-				"SCL"
-			],
-			"areaTags": [
-				"ST",
-				"MT"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					}
-				]
-			},
-			"optionalfeatures": [
-				{
-					"name": "Pact of the Tome",
-					"source": "PHB",
-					"featureType": [
-						"PB"
-					]
-				}
-			],
-			"feats": [
-				{
-					"name": "Magic Initiate",
-					"source": "PHB"
-				},
-				{
-					"name": "Spell Sniper",
-					"source": "PHB"
-				}
-			]
 		}
 	]
 }

@@ -215,25 +215,18 @@ std::string fet_duration(json fet_d) {
 				// Conc, if is set it SHOULD be true
 
 				conc = curr_d["concentration"].template get<bool>();
-				upTo = conc;
 			}
 
-			std::string concto = "";
-
-			if (conc) {
+			// Avrae adds the "Concentration, up to" part if flag is set!
+			/*if (conc) {
 				concto += "Concentration, ";
-			}
+			}*/
 
 			if (upTo) {
-				if (concto == "") {
-					concto += "Up to ";
-				}
-				else {
-					concto += "up to ";
-				}
+				ret += "Up to ";
 			}
 
-			ret += concto + std::to_string(amount) + " ";
+			ret += std::to_string(amount) + " ";
 
 			// Pluralize if needed
 			if (amount > 1) {
@@ -314,8 +307,11 @@ std::string fet_sanitizer(std::string in) {
 std::string fet_entries(std::vector<std::string> entries) {
 	std::string ret = "";
 
-	for (std::string entry : entries) {
-		ret += fet_sanitizer(entry) + "\n";
+	for (int i = 0; i < entries.size(); i++) {
+		if (i > 0) {
+			ret += "\\n";
+		}
+		ret += fet_sanitizer(entries[i]);
 	}
 
 	return ret;
@@ -346,12 +342,20 @@ std::string fet_entries(std::vector<std::string> entries) {
  */
 json fet_components(json fet_c, int level) {
 	json ret;
+
 	if (!fet_c["v"].is_null()) {
 		ret["verbal"] = true;
+	}
+	else {
+		ret["verbal"] = false;
+	
 	}
 
 	if (!fet_c["s"].is_null()) {
 		ret["somatic"] = true;
+	}
+	else {
+		ret["somatic"] = false;
 	}
 
 	// Build "material" string
@@ -382,4 +386,46 @@ json fet_components(json fet_c, int level) {
 	ret["material"] = m;
 
 	return ret;
+}
+
+/**
+ * 5etools and Avrae use the same school mappings, EXCEPT
+ * (Maybe we want the mappings here)
+ * fet - "P" = Avrae - "Psionic" (any text that isn't the above is a custom school)
+ */
+std::string fet_school(json fet_s) {
+	if(fet_s.template get<std::string>() == "P") {
+		return "Psionic";
+	}
+	else {
+		return fet_s.template get<std::string>();
+	}
+}
+
+/**
+ * Input: Avrae record to modify (school already populated)
+ * 5et format is a json wrapper of a list of strings (subschools)
+ * 
+ * Avrae just appends subschools to the school field (in parentheses),
+ * so just do that
+ */
+bool add_subschools(Avrae &a, json fet_s) {
+	std::vector<std::string> subs = fet_s.template get<std::vector<std::string>>();
+
+	if(subs.size() == 0) {
+		return false;
+	}
+	std::string tmp = a.school;
+	tmp += " (";
+
+	for(int i = 0; i < subs.size(); i++) {
+		if(i > 0) {
+			tmp += ", ";
+		}
+		tmp += subs[i];
+	}
+
+	tmp += ")";
+	a.school = tmp;
+	return true;
 }

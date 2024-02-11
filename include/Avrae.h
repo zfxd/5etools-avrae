@@ -16,22 +16,42 @@ class Avrae
 		std::string name;
 		int level;
 		std::string school;
-		// automation
+		std::vector < std::string > automation;
 		std::string classes;
-		std::string subclasses;
+		std::string subclasses = "";
 		std::string casttime;
 		std::string range;
 		json components;
 		std::string duration;
-		bool ritual;
+		bool ritual = false;
 		std::string description;
-		std::string higherlevels;
-		bool concentration;
+		std::string higherlevels = "";
+		bool concentration = false;
 
 		
 	// Shouldn't need to explicitly declare these...
 	//	Avrae();
 	// ~Avrae();
+
+		std::string to_string() {
+			// to string
+			std::string str = "{\"name\":\"" + name + "\",";
+			str += "\"level\":" + std::to_string(level) + ",";
+			str += "\"school\":\"" + school + "\",";
+			str += "\"automation\":[],"; // Maybe we add automation support next time lol
+			str += "\"classes\":\"" + classes + "\",";
+			str += "\"subclasses\":\"" + subclasses + "\",";
+			str += "\"casttime\":\"" + casttime + "\",";
+			str += "\"range\":\"" + range + "\",";
+			str += "\"components\":" + components.dump() + ",";
+			str += "\"duration\":\"" + duration + "\",";
+			str += "\"ritual\":" + std::to_string(ritual) + ",";
+			str += "\"description\":\"" + description + "\",";
+			str += "\"higherlevels\":\"" + higherlevels + "\",";
+			str += "\"concentration\":" + std::to_string(concentration) + "}";
+			return str;
+
+		}
 
 	
 
