@@ -177,18 +177,18 @@ int main()
 		avrae_spells.push_back(curr);
 	}
 
-	std::cout << "AVRAE SPELLS:::::::" << std::endl;
-	
-	// We do files at some point... TODO
-	std::cout << "[";
+	// Output to file
+	std::ofstream out;
+	out.open("../../../out.json");
+	out << "[";
 	for (int i = 0; i < avrae_spells.size(); i++) {
-		if(i != 0) {
-			std::cout << ",";
+		if (i != 0) {
+			out << ",";
 		}
 
-		std::cout << avrae_spells[i].to_string();
+		out << avrae_spells[i].to_string();
 	}
-	std::cout << "]";
+	out << "]";
 
 	return 0;
 }
