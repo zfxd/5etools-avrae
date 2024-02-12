@@ -11,7 +11,7 @@ int main()
 {
 	std::ifstream f;
 
-	f.open("../../../in.json");
+	f.open("../../../epb.json");
 
 	// Check if open was successful
 	if (f.fail()) {

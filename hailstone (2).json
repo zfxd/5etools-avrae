@@ -1,0 +1,67 @@
+{"spell": {
+	"name": "Hailstone Swarm",
+	"source": "SeanTerraElementalistsPocketbook",
+	"page": 11,
+	"level": 7,
+	"school": "V",
+	"time": [
+		{
+			"number": 1,
+			"unit": "action"
+		}
+	],
+	"range": {
+		"type": "point",
+		"distance": {
+			"type": "feet",
+			"amount": 300
+		}
+	},
+	"duration": [
+		{
+			"type": "instant"
+		}
+	],
+	"entries": [
+		"Huge hailstones of ice plummet to the ground and explode at three different points you can see within range. Each creature in a 20-foot-radius sphere centered on each point you choose must make a Constitution saving throw. The sphere spreads around corners. On a failed save, a creature takes {@damage 4d6} bludgeoning damage and {@damage 4d6} cold damage, and has its speed reduced to 0 until the end of its next turn. On a successful save, a creature takes half as much damage. A creature in the area of more than one hailstone is affected only once. ",
+		"The spell extinguishes unprotected flames and freezes water in the area."
+	],
+	"entriesHigherLevel": [
+		{
+			"name": "At Higher Levels",
+			"entries": [
+				"When you cast this spell using a spell slot of 8th level or higher, the damage increases by {@dice 1d6} for each slot level above 7th."
+			],
+			"type": "entries"
+		}
+	],
+	"damageInflict": [
+		"bludgeoning",
+		"cold"
+	],
+	"savingThrow": [
+		"constitution"
+	],
+	"areaTags": [
+		"S"
+	],
+	"classes": {
+		"fromClassList": [
+			{
+				"name": "Druid",
+				"source": "PHB"
+			},
+			{
+				"name": "Sorcerer",
+				"source": "PHB"
+			},
+			{
+				"name": "Wizard",
+				"source": "PHB"
+			}
+		]
+	},
+	"miscTags": [
+		"SGT"
+	]
+}}

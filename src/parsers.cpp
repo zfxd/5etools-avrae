@@ -343,6 +343,16 @@ std::string fet_entries(std::vector<std::string> entries) {
 json fet_components(json fet_c, int level) {
 	json ret;
 
+
+	// Error checking
+	if (fet_c.is_null()) {
+		std::cerr << "This spell has no components. Are you sure?" << std::endl;
+		ret["verbal"] = false;
+		ret["somatic"] = false;
+		ret["material"] = "";
+		return ret;
+	}
+
 	if (!fet_c["v"].is_null()) {
 		ret["verbal"] = true;
 	}
